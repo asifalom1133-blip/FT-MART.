@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>FT MART — এক দোকানেই সবকিছু</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">FT</span><span>FT <b>MART</b><small>এক দোকানেই সবকিছু</small></span></a>
+  <form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="পণ্য খুঁজুন..." aria-label="পণ্য খুঁজুন"><button>খুঁজুন</button></form>
+  <button class="cart-button" id="openCart">🛒 কার্ট <span id="cartCount">0</span></button>
+</header>
+<section class="hero">
+  <div><p class="eyebrow">স্বাগতম FT MART-এ</p><h1>আপনার পছন্দের<br><em>সবকিছু এক জায়গায়</em></h1>
+  <p>ফ্যাশন, গ্যাজেট ও দৈনন্দিন প্রয়োজনীয় পণ্য—সহজে বেছে নিন।</p>
+  <a href="#products" class="primary-link">এখনই কেনাকাটা করুন →</a></div>
+  <div class="hero-art"><div class="bag">🛍️</div><span>BEST PICKS<br><b>JUST FOR YOU</b></span></div>
+</section>
+<nav class="categories" aria-label="পণ্যের বিভাগ">
+  <button class="active" data-category="সব">সব পণ্য</button>
+  <button data-category="ফ্যাশন">👕 ফ্যাশন</button>
+  <button data-category="মোবাইল">📱 মোবাইল</button>
+  <button data-category="জুতা">👟 জুতা</button>
+  <button data-category="ঘর">🏠 ঘর ও লাইফস্টাইল</button>
+</nav>
+<main id="products" class="content">
+  <div class="section-heading"><div><p class="eyebrow">আপনার জন্য বাছাই করা</p><h2>জনপ্রিয় পণ্য</h2></div><span id="resultCount"></span></div>
+  <div class="product-grid" id="productGrid"></div>
+</main>
+<section class="benefits">
+  <div>🚚 <b>সহজ অর্ডার</b><small>ঘরে বসেই অর্ডার করুন</small></div>
+  <div>💬 <b>সহায়তা</b><small>প্রশ্ন থাকলে যোগাযোগ করুন</small></div>
+  <div>✨ <b>বাছাই করা পণ্য</b><small>পছন্দের জিনিস এক জায়গায়</small></div>
+</section>
+<footer><a class="brand footer-brand" href="#"><span class="brand-mark">FT</span><span>FT <b>MART</b><small>এক দোকানেই সবকিছু</small></span></a><p>© <span id="year"></span> FT MART. সর্বস্বত্ব সংরক্ষিত।</p><p class="fine">ডেমো স্টোর: অর্ডার দেওয়ার আগে বিক্রেতার সঙ্গে মূল্য ও পণ্যের তথ্য নিশ্চিত করুন।</p></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="আপনার কার্ট">
+  <div class="drawer-head"><h2>আপনার কার্ট</h2><button id="closeCart" aria-label="বন্ধ করুন">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-total"><span>মোট</span><b id="cartTotal">₹0</b></div>
+  <form id="checkoutForm" class="checkout">
+    <h3>অর্ডারের তথ্য</h3>
+    <label>আপনার নাম<input required id="customerName" placeholder="নাম লিখুন"></label>
+    <label>মোবাইল নম্বর<input required id="customerPhone" inputmode="tel" placeholder="মোবাইল নম্বর"></label>
+    <label>ডেলিভারি ঠিকানা<textarea required id="customerAddress" rows="2" placeholder="সম্পূর্ণ ঠিকানা"></textarea></label>
+    <button class="checkout-button" type="submit">WhatsApp-এ অর্ডার পাঠান</button>
+    <p class="fine">এই ডেমোতে অর্ডার WhatsApp মেসেজ হিসেবে তৈরি হবে। অনলাইন পেমেন্ট এখনো যুক্ত নেই।</p>
+  </form>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
